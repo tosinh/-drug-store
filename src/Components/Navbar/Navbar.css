@@ -1,0 +1,86 @@
+.wrap {
+    box-shadow: 2px 2px 4px #888888;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+}
+
+.header-search {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 24px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.header-search>* {
+    margin-left: 20px;
+}
+
+.header-search input {
+    height: 36px;
+    flex: 1;
+    border: none;
+}
+
+.header-search label {
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header-search input:focus {
+    outline: none;
+}
+
+.login-button {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.login-button>* {
+    margin: 0 10px;
+}
+
+.login-button a {
+    color: black;
+    text-decoration: none;
+}
+
+
+nav {
+    margin: 10px 0;
+}
+
+.nav-menu {
+    height: 44px;
+}
+
+.nav-menu ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 0;
+
+}
+
+.nav-menu ul li {
+    display: block;
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.nav-menu ul li.active {
+    color: var(--primary-color);
+}
