@@ -3,7 +3,9 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { FaRegUserCircle } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
+import logo from '../Assest/logo.svg'
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 
 export const Navbar = () =>
@@ -13,6 +15,18 @@ export const Navbar = () =>
     const handleItemClick = (itemName) =>
     {
         setActiveItem(itemName === activeItem ? null : itemName);
+    };
+
+    const [isShown, setIsShown] = useState(false);
+
+    const handleMouseEnter = () =>
+    {
+        setIsShown(true);
+    };
+
+    const handleMouseLeave = () =>
+    {
+        setIsShown(false);
     };
 
     return (
@@ -47,15 +61,19 @@ export const Navbar = () =>
                     <div className='row'>
                         <div className='nav-menu'>
                             <ul >
-                                <li className={activeItem === 'Activity 1' ? 'active' : ''}
-                                    onClick={() => handleItemClick('Activity 1')} to="/">Trang chủ</li>
-                                <li className={activeItem === 'Activity 1' ? 'active' : ''}
-                                    onClick={() => handleItemClick('Activity 1')} to="/">Giới thiệu</li>
-                                <li className={activeItem === 'Activity 2' ? 'active' : ''}
-                                    onClick={() => handleItemClick('Activity 2')} to="/">Sản phẩm</li>
-                                <li className={activeItem === 'Activity 2' ? 'active' : ''}
-                                    onClick={() => handleItemClick('Activity 2')} to="/">Liên hệ</li>
+                                <li className={activeItem === 'home' ? 'active' : ''}
+                                    onClick={() => handleItemClick('home')} to="/">Trang chủ</li>
+                                <li className={activeItem === 'intro' ? 'active' : ''}
+                                    onClick={() => handleItemClick('intro')} to="/">Giới thiệu</li>
+                                <li className={activeItem === 'product' ? 'active' : ''}
+                                    onClick={() => handleItemClick('product')} to="/"
+                                >
+                                    Sản phẩm</li>
+
+                                <li className={activeItem === 'info' ? 'active' : ''}
+                                    onClick={() => handleItemClick('info')} to="/">Liên hệ</li>
                             </ul>
+
                         </div>
                     </div>
                 </div>
