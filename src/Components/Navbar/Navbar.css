@@ -1,9 +1,10 @@
-.wrap {
-    /* background-color: var(--secondary-color); */
+/* .wrap {
+    background-color: var(--secondary-color);
     position: relative;
     box-shadow: 2px 2px 4px #888888;
-}
+} */
 
+/* 
 .wrap::before {
     content: '';
     position: absolute;
@@ -14,7 +15,7 @@
     background-image: url(../Assest/bg-cat.jpg);
     opacity: 0.2;
     z-index: -1;
-}
+} */
 
 header {
     display: flex;
@@ -90,12 +91,19 @@ nav {
 }
 
 .nav-menu ul li {
-    display: block;
     list-style-type: none;
+}
+
+.nav-menu ul li.active {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    display: block;
     cursor: pointer;
     margin-left: 100px;
 }
 
-.nav-menu ul li.active {
+.nav-link.active {
     color: var(--primary-color);
 }

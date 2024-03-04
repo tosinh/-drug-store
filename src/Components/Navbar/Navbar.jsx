@@ -5,7 +5,10 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
 import logo from '../Assest/logo.svg'
 import './Navbar.css'
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
+import { Banner } from '../Banner/Banner.jsx'
+import { Contact } from '../Contact/Contact.jsx';
+import { Products } from '../Products/Products.jsx';
 
 
 export const Navbar = () =>
@@ -62,22 +65,28 @@ export const Navbar = () =>
                         <div className='nav-menu'>
                             <ul >
                                 <li className={activeItem === 'home' ? 'active' : ''}
-                                    onClick={() => handleItemClick('home')} to="/">Trang chủ</li>
-                                <li className={activeItem === 'intro' ? 'active' : ''}
-                                    onClick={() => handleItemClick('intro')} to="/">Giới thiệu</li>
-                                <li className={activeItem === 'product' ? 'active' : ''}
-                                    onClick={() => handleItemClick('product')} to="/"
-                                >
-                                    Sản phẩm</li>
-
-                                <li className={activeItem === 'info' ? 'active' : ''}
-                                    onClick={() => handleItemClick('info')} to="/">Liên hệ</li>
+                                    onClick={() => handleItemClick('home')} >
+                                    <Link to='/' className='nav-link'>Trang chủ</Link></li>
+                                {/* <li className={activeItem === 'intro' ? 'active' : ''}
+                                    onClick={() => handleItemClick('intro')} >
+                                    <Link to='/intro'>Giới thiệu</Link></li> */}
+                                <li className={activeItem === 'products' ? 'active' : ''}
+                                    onClick={() => handleItemClick('products')} >
+                                    <Link to='/products' className='nav-link'>Sản phẩm</Link></li>
+                                <li className={activeItem === 'contact' ? 'active' : ''}
+                                    onClick={() => handleItemClick('contact')} >
+                                    <Link to='/contact' className='nav-link'>Liên hệ</Link></li>
                             </ul>
 
                         </div>
-                    </div>
-                </div>
+                    </div >
+                </div >
             </nav >
+            <Routes>
+                <Route exact path="/" element={<Banner />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
         </div >
     )
 }
