@@ -1,0 +1,103 @@
+.intro-top {
+    margin-bottom: 100px;
+}
+
+.intro-top .row {
+    margin-bottom: 48px;
+    padding: 0 24px;
+}
+
+.intro-top .col-5 {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-top img {
+    width: 400px;
+}
+
+.heading {
+    color: var(--primary-color);
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 800;
+    margin: 10px 0px 26px;
+}
+
+.intro-heading span {
+    display: flex;
+    justify-content: left;
+}
+
+.intro-heading p {
+    font-size: 17px;
+    line-height: 28px;
+    text-align: left;
+}
+
+.intro-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px 0;
+}
+
+.intro-item {
+    grid-column: span 1;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.icon,
+.intro-item h3,
+.intro-item p {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-item h3 {
+    margin: 10px 0;
+}
+
+.intro-item p {
+    padding: 0 24px;
+    text-align: center;
+}
+
+.procedure {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.procedure .intro-heading {
+    width: 100%;
+}
+
+.procedure-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.procedure-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.procedure-item img {
+    width: 180px;
+    margin: auto;
+}
+
+.procedure-item span {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.procedure-item p {
+    text-align: center;
+    padding: 0 10px;
+}

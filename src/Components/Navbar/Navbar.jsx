@@ -7,6 +7,7 @@ import logo from '../Assest/logo.svg'
 import './Navbar.css'
 import { Link, Route, Routes } from 'react-router-dom';
 import { Banner } from '../Banner/Banner.jsx'
+import { Home } from '../Home/Home.jsx'
 import { Contact } from '../Contact/Contact.jsx';
 import { Products } from '../Products/Products.jsx';
 
@@ -67,9 +68,6 @@ export const Navbar = () =>
                                 <li className={activeItem === 'home' ? 'active' : ''}
                                     onClick={() => handleItemClick('home')} >
                                     <Link to='/' className='nav-link'>Trang chủ</Link></li>
-                                {/* <li className={activeItem === 'intro' ? 'active' : ''}
-                                    onClick={() => handleItemClick('intro')} >
-                                    <Link to='/intro'>Giới thiệu</Link></li> */}
                                 <li className={activeItem === 'products' ? 'active' : ''}
                                     onClick={() => handleItemClick('products')} >
                                     <Link to='/products' className='nav-link'>Sản phẩm</Link></li>
@@ -83,7 +81,7 @@ export const Navbar = () =>
                 </div >
             </nav >
             <Routes>
-                <Route exact path="/" element={<Banner />} />
+                <Route exact path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>

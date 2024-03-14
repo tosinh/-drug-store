@@ -33,7 +33,7 @@ export const Products = () =>
                                     <img src={product.url} alt={product.name} />
                                     <span>{product.name}</span>
                                     <p>{product.price} VND</p>
-                                    <button>Xem sản phẩm</button>
+                                    {/* <button>Xem sản phẩm</button> */}
                                 </div>
                             ))}
                         </div>

@@ -1,0 +1,34 @@
+footer {
+    background-color: var(--secondary-color);
+    padding-top: 36px;
+    margin-top: 24px;
+}
+
+.footer-top-list {
+    list-style-type: none;
+}
+
+.footer-top-list li {
+    margin: 5px 0;
+}
+
+.footer-bot-list {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+}
+
+.footer-row::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.footer-bot-list li {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 8px;
+}
