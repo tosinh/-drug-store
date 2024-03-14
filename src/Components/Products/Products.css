@@ -33,7 +33,7 @@
 .product-item {
     position: relative;
     width: 180px;
-    height: 330px;
+    height: 310px;
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.2);
@@ -47,8 +47,11 @@
 }
 
 .product-item span {
+    height: 61px;
+    width: 100%;
+    display: inline-block;
     margin-top: 10px;
-    padding: 8px;
+    padding: 0 8px;
     color: var(--text-color);
 }
 

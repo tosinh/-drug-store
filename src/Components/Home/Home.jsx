@@ -4,6 +4,8 @@ import data from './Home.js';
 import { Banner } from '../Banner/Banner.jsx';
 
 import Cat from '../Assest/cats.png'
+import petshop2 from '../Assest/petshop2.png'
+import petshop3 from '../Assest/petshop3.png'
 
 export const Home = () =>
 {
@@ -21,10 +23,10 @@ export const Home = () =>
                                 <p>Các sản phẩm của Thuốc Thú Y Online đa dạng về chủng loại, qui cách và đường sử dụng đáp ứng đầy đủ các nhu cầu của người chăn nuôi trong: Phòng Ngừa – Tăng Trọng – Điều Trị – Khôi Phục – Phát Triển của nhiều đối tượng vật nuôi, gia súc gia cầm trong gia đình và sản xuất.</p>
                             </div>
                         </div>
-                        <div className="col-5"><img src={Cat} alt="cat" /></div>
+                        <div className="col-5"><img src={petshop2} alt="cat" /></div>
                     </div>
                     <div className="row">
-                        <div className="col-5"><img src={Cat} alt="cat" /></div>
+                        <div className="col-5"><img src={petshop3} alt="cat" /></div>
                         <div className="col-7">
                             <div className='intro-heading '>
                                 <span className='heading'>ĐỐI TÁC & KHÁCH HÀNG</span>

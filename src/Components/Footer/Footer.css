@@ -9,6 +9,7 @@ footer {
 }
 
 .footer-top-list li {
+    font-weight: 600;
     margin: 5px 0;
 }
 
@@ -29,6 +30,5 @@ footer {
 
 .footer-bot-list li {
     font-size: 20px;
-    font-weight: 700;
     margin: 0 8px;
 }
