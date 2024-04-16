@@ -5,11 +5,11 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
 import logo from '../Assest/logo.svg'
 import './Navbar.css'
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Banner } from '../Banner/Banner.jsx'
-import { Home } from '../Home/Home.jsx'
-import { Contact } from '../Contact/Contact.jsx';
-import { Products } from '../Products/Products.jsx';
+// import { Home } from '../Home/Home.jsx'
+// import { Contact } from '../Contact/Contact.jsx';
+// import { Products } from '../Products/Products.jsx';
 
 
 export const Navbar = () =>
@@ -68,9 +68,9 @@ export const Navbar = () =>
                                 <li className={activeItem === 'home' ? 'active' : ''}
                                     onClick={() => handleItemClick('home')} >
                                     <Link to='/' className='nav-link'>Trang chủ</Link></li>
-                                <li className={activeItem === 'products' ? 'active' : ''}
-                                    onClick={() => handleItemClick('products')} >
-                                    <Link to='/products' className='nav-link'>Sản phẩm</Link></li>
+                                <li className={activeItem === 'product' ? 'active' : ''}
+                                    onClick={() => handleItemClick('product')} >
+                                    <Link to='/product' className='nav-link'>Sản phẩm</Link></li>
                                 <li className={activeItem === 'contact' ? 'active' : ''}
                                     onClick={() => handleItemClick('contact')} >
                                     <Link to='/contact' className='nav-link'>Liên hệ</Link></li>
@@ -80,11 +80,11 @@ export const Navbar = () =>
                     </div >
                 </div >
             </nav >
-            <Routes>
+            {/* <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/contact" element={<Contact />} />
-            </Routes>
+            </Routes> */}
         </div >
     )
 }

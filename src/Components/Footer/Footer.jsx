@@ -33,7 +33,7 @@ export const Footer = () =>
                 </div>
 
                 <div className="row footer-row">
-                    <div className="col">Copyright © 2024</div>
+                    <div className="col">No Copyright © 2024</div>
                     <div className="col">
                         <ul className='footer-bot-list'>
                             <li><FaFacebook /></li>

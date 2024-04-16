@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import data from './Products.js'
-import './Products.css'
+import { Link } from 'react-router-dom';
+import data from './Product.js'
+import './Product.css'
 
 
 
-export const Products = () =>
+export const Product = () =>
 {
     const { products, danh_muc } = data;
 
@@ -30,9 +31,11 @@ export const Products = () =>
                         <div className="product-list">
                             {products.map((product) => (
                                 <div key={product.id} className="product-item">
-                                    <img src={product.url} alt={product.name} />
-                                    <span>{product.name}</span>
-                                    <p>{product.price} VND</p>
+                                    <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+                                        <img src={product.url} alt={product.name} />
+                                        <span>{product.name}</span>
+                                        <p>{product.price} đ</p>
+                                    </Link>
                                     {/* <button>Xem sản phẩm</button> */}
                                 </div>
                             ))}
@@ -40,6 +43,6 @@ export const Products = () =>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
