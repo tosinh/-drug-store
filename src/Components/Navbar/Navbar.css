@@ -16,6 +16,17 @@
     opacity: 0.2;
     z-index: -1;
 } */
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: 600;
+}
 
 header {
     display: flex;
@@ -60,6 +71,7 @@ header {
     display: flex;
     justify-content: right;
     align-items: center;
+    gap: 10px;
 }
 
 .login-button>* {
@@ -106,4 +118,24 @@ nav {
 
 .nav-link.active {
     color: var(--primary-color);
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
 }

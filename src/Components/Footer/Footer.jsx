@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../Assest/logo.svg';
 import './Footer.css'
 
 import { FaFacebook } from "react-icons/fa";
@@ -12,8 +13,12 @@ export const Footer = () =>
         <footer>
             <div className="container">
                 <div className="row">
-                    <div className="col">
+                    {/* <div className="col">
                         <GiJumpingDog style={{ fill: '#000', fontSize: '44px' }} />
+                    </div> */}
+                    <div className="col logo" to="/">
+                        <img src={logo} alt="logo" />
+                        <span>Drug Store</span>
                     </div>
                     <div className="col">
                         <ul className='footer-top-list'>

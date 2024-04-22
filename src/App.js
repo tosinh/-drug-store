@@ -8,6 +8,8 @@ import { Product } from './Components/Product/Product.jsx';
 import { ProductDetails } from './Components/ProductDetails/ProductDetails.jsx';
 import { Contact } from './Components/Contact/Contact';
 import { Home } from './Components/Home/Home.jsx';
+import { Cart } from './Components/Cart/Cart.jsx'
+import { ShopContext, ShopContextProvider } from "./Contexts/Cart.jsx";
 
 function App()
 {
@@ -25,17 +27,44 @@ function App()
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Layout />,
+            element:
+                <ShopContextProvider>
+                    <Layout />
+                </ShopContextProvider>
+            ,
             children: [
-                { path: "/", element: <Home /> },
-                { path: "/product", element: <Product /> },
-                { path: "/contact", element: <Contact /> },
-                { path: "/product/:id", element: <ProductDetails /> },
+                {
+                    path: "/",
+                    element: <Home />
+                },
+                {
+                    path: "/product",
+                    element: <Product />
+                },
+                {
+                    path: "/contact",
+                    element: <Contact />
+                },
+                {
+                    path: "/cart", element:
+                        // <ShopContextProvider>
+                        //     <Cart />
+                        // </ShopContextProvider>
+                        <Cart />
+                },
+                {
+                    path: "/product/:id",
+                    element:
+                        <ProductDetails />
+                    // <ShopContextProvider>
+                    //     <ProductDetails />
+                    // </ShopContextProvider>
+                },
             ],
         },
     ]);
-    // Remove the commented-out return statement (assuming `root` is defined elsewhere)
-    return <RouterProvider router={router} />; // Render the RouterProvider directly
+
+    return <RouterProvider router={router} />;
 }
 
 export default App;

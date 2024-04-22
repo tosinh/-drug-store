@@ -3,13 +3,10 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { FaRegUserCircle } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
-import logo from '../Assest/logo.svg'
+import logo from '../Assest/logo.svg';
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 import { Banner } from '../Banner/Banner.jsx'
-// import { Home } from '../Home/Home.jsx'
-// import { Contact } from '../Contact/Contact.jsx';
-// import { Products } from '../Products/Products.jsx';
 
 
 export const Navbar = () =>
@@ -38,8 +35,13 @@ export const Navbar = () =>
             <header >
                 <div className="container">
                     <div class="row">
-                        <div className="col-2 header-logo" to="/">
-                            <GiJumpingDog style={{ fill: '#000', fontSize: '44px' }} />
+                        {/* <div className="col-2 header-logo" to="/">
+                            <img src="logo.svg" alt="logo" />
+                            <GiJumpingDog style={{ fill: '#000', fontSize: '44px' }} 
+                        </div> */}
+                        <div className="col-2 logo" to="/">
+                            <img src={logo} alt="logo" />
+                            <span>Drug Store</span>
                         </div>
 
                         <div className="col-7">
@@ -53,12 +55,15 @@ export const Navbar = () =>
                             <div className='login-button'>
                                 <a href="#">Đăng nhập / Đăng ký</a>
                                 <FaRegUserCircle style={{ fill: '#000', fontSize: '24px' }} />
-                                <MdAddShoppingCart style={{ fill: '#000', fontSize: '24px' }} />
+                                <Link to='/cart' className='cart-icon'>
+                                    <MdAddShoppingCart style={{ fill: '#000', fontSize: '24px' }} />
+                                    <span>0</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
+            </header >
 
             <nav>
                 <div className='container'>
@@ -80,11 +85,6 @@ export const Navbar = () =>
                     </div >
                 </div >
             </nav >
-            {/* <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes> */}
         </div >
     )
 }
