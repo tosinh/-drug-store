@@ -19,7 +19,7 @@
     padding: 5px;
 }
 
-button {
+.button {
     background-color: var(--primary-color);
     width: 78px;
     height: 30px;
@@ -30,6 +30,6 @@ button {
     opacity: 1;
 }
 
-button:hover {
+.button:hover {
     opacity: 0.8;
 }

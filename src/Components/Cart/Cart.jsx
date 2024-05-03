@@ -3,6 +3,7 @@ import { ShopContext } from "../../Contexts/Cart.jsx";
 import data from '../Product/Product.js';
 import { CartItem } from "./CartItem.jsx";
 import { useNavigate } from "react-router-dom";
+import emptyCartImage from '../Assest/cart-empty.png'
 
 import "./Cart.css";
 
@@ -14,26 +15,30 @@ export const Cart = () =>
     // console.log(totalAmount);
 
     const navigate = useNavigate();
+    const itemCount = Object.values(cartItems).reduce((acc, count) => acc + count, 0);
 
     return (
         <div className="cart">
-            <div>
-                <h1>Giỏ Hàng</h1>
-            </div>
-            <div className="cart">
-                {products.map((product) =>
-                {
-                    if (cartItems[product.id] !== 0)
+            {itemCount === 0 ? (
+                <div className="empty-cart">
+                    <img src={emptyCartImage} alt="Empty Cart" />
+                    {/* <button onClick={() => navigate("/product")}>Tiếp tục mua sắm</button> */}
+                </div>
+            ) : (
+                <div className="cart">
+                    {products.map((product) =>
                     {
-                        return <CartItem data={product} />;
-                    }
-                })}
-            </div>
-
-            {/* {totalAmount > 0 ? (
+                        if (cartItems[product.id] !== 0)
+                        {
+                            return <CartItem data={product} />;
+                        }
+                    })}
+                </div>
+            )}
+            {itemCount > 0 && (
                 <div className="checkout">
-                    <p> Subtotal: ${totalAmount} </p>
-                    <button onClick={() => navigate("/")}> Continue Shopping </button>
+                    <p> Subtotal: ${getTotalCartAmount()} </p>
+                    <button onClick={() => navigate("/product")}> Tiếp tục mua sắm </button>
                     <button
                         onClick={() =>
                         {
@@ -42,12 +47,10 @@ export const Cart = () =>
                         }}
                     >
                         {" "}
-                        Checkout{" "}
+                        Thanh toán{" "}
                     </button>
                 </div>
-            ) : (
-                <h1> Your Shopping Cart is Empty</h1>
-            )} */}
+            )}
         </div>
     );
 };

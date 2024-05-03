@@ -10,6 +10,7 @@ import { Contact } from './Components/Contact/Contact';
 import { Home } from './Components/Home/Home.jsx';
 import { Cart } from './Components/Cart/Cart.jsx'
 import { ShopContext, ShopContextProvider } from "./Contexts/Cart.jsx";
+import { Login } from './Components/Login/Login.jsx';
 
 function App()
 {
@@ -47,20 +48,18 @@ function App()
                 },
                 {
                     path: "/cart", element:
-                        // <ShopContextProvider>
-                        //     <Cart />
-                        // </ShopContextProvider>
                         <Cart />
                 },
                 {
                     path: "/product/:id",
                     element:
                         <ProductDetails />
-                    // <ShopContextProvider>
-                    //     <ProductDetails />
-                    // </ShopContextProvider>
                 },
             ],
+        },
+        {
+            path: "/login",
+            element: <Login />,
         },
     ]);
 

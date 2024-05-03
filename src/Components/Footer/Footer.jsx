@@ -6,6 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 export const Footer = () =>
 {
@@ -22,9 +23,15 @@ export const Footer = () =>
                     </div>
                     <div className="col">
                         <ul className='footer-top-list'>
-                            <li>Trang chủ</li>
-                            <li>Sản phẩm</li>
-                            <li></li>
+                            <li>
+                                <Link to="/" className="footer-link">Trang chủ</Link>
+                            </li>
+                            <li>
+                                <Link to="/products" className="footer-link">Sản phẩm</Link>
+                            </li>
+                            <li>
+                                <Link to="/cart" className="footer-link">Giỏ hàng</Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="col">

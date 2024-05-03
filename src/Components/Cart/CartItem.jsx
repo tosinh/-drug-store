@@ -6,6 +6,17 @@ export const CartItem = (props) =>
     const { id, name, price, url } = props.data;
     const { cartItems, addToCart, removeFromCart, updateCartItemCount } = useContext(ShopContext);
 
+    const calculateTotal = (price, quantity) =>
+    {
+        if (price <= 0 || quantity <= 0)
+        {
+            return '0 đ';
+        }
+        return (price * quantity) + 'đ';
+    };
+
+    const quantity = cartItems[id] || 0;
+
     return (
         <div className="cartItem">
             <img src={url} />
@@ -19,7 +30,9 @@ export const CartItem = (props) =>
                 />
                 <button id="button-add" onClick={() => addToCart(id)}> + </button>
             </div>
-            <div >{price} đ</div>
+            <div >
+                {calculateTotal(price, quantity)}
+            </div>
             <div >Xóa</div>
         </div>
     );

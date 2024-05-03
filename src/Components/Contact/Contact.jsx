@@ -82,7 +82,7 @@ export const Contact = () =>
                                 onChange={handleContentChange}
                             />
                             <br />
-                            <button type="submit">Gửi</button>
+                            <button className='button' type="submit">Gửi</button>
                         </form>
 
                     </div>

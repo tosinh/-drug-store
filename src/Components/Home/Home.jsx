@@ -93,10 +93,6 @@ export const Home = () =>
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     )
 }

@@ -13,6 +13,11 @@ footer {
     margin: 5px 0;
 }
 
+.footer-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .footer-bot-list {
     display: flex;
     justify-content: right;
@@ -26,9 +31,4 @@ footer {
     height: 1px;
     background-color: #ccc;
     margin: 10px 0;
-}
-
-.footer-bot-list li {
-    font-size: 20px;
-    margin: 0 8px;
 }
