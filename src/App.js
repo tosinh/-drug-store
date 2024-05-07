@@ -10,7 +10,8 @@ import { Contact } from './Components/Contact/Contact';
 import { Home } from './Components/Home/Home.jsx';
 import { Cart } from './Components/Cart/Cart.jsx'
 import { ShopContext, ShopContextProvider } from "./Contexts/Cart.jsx";
-import { Login } from './Components/Login/Login.jsx';
+import Login from './Components/Login/Login.js';
+
 
 function App()
 {

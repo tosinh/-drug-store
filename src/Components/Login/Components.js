@@ -157,3 +157,9 @@ export const Paragraph = styled.p`
    letter-spacing: 0.5px;
    margin: 20px 0 30px
  `;
+
+export const Error = styled.div`
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+`;
